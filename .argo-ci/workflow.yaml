@@ -3,6 +3,9 @@ kind: Workflow
 metadata:
   generateName: workflow-template-hello-world-
   namespace: playground
+  annotations:
+    argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
 spec:
   entrypoint: hello-world-from-templateRef
   templates:
