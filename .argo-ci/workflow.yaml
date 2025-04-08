@@ -5,6 +5,8 @@ metadata:
   namespace: playground
 spec:
   entrypoint: hello-world-from-templateRef
+  podGC: 
+    strategy: OnWorkflowCompletion
   templates:
   - name: hello-world-from-templateRef
     steps:
