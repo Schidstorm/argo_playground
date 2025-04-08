@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
-  name: workflow-template-hello-world
+  name: workflow-template-hello-world-abc
   namespace: playground
 spec:
   entrypoint: hello-world-from-templateRef
   templates:
-  - name: hello-world-from-templateRef-abcde
+  - name: hello-world-from-templateRef
     steps:
       - - name: call-print-message
           templateRef:
