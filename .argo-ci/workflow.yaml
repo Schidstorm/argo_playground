@@ -3,12 +3,10 @@ kind: Workflow
 metadata:
   name: workflow-template-hello-world
   namespace: playground
-  labels:
-    commit: "abcde"
 spec:
   entrypoint: hello-world-from-templateRef
   templates:
-  - name: hello-world-from-templateRef
+  - name: hello-world-from-templateRef-abcde
     steps:
       - - name: call-print-message
           templateRef:
